@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/Header';
 import './styles.css'; 
-
+import Footer from './components/Footer';
 function App() {
     return (
         <div className="app">
@@ -12,7 +12,9 @@ function App() {
             <p>Your one-stop shop for all things golf.</p>
             <img src="/assets/titan-logo.png" alt="Titan Logo" style={{ height: 100 }} />
            </main>
+        <Footer />
         </div>
+
     );
 }
 
