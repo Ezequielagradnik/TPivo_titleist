@@ -1,21 +1,41 @@
 import React from "react";
 
 const Feature = () => (
-  <section className="flex flex-col items-center justify-center text-center py-24 bg-gradient-to-b from-white via-blue-50 to-blue-100 relative overflow-hidden">
-    {/* Efecto visual: círculos de fondo */}
+  <section className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white via-blue-50 to-blue-100 relative overflow-hidden">
+    {/* Background blobs */}
     <div className="absolute inset-0 pointer-events-none">
-      <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-200 opacity-30 rounded-full blur-3xl"></div>
-      <div className="absolute right-10 bottom-10 w-72 h-72 bg-blue-400 opacity-20 rounded-full blur-2xl"></div>
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-200 opacity-30 rounded-full blur-3xl"></div>
+      <div className="absolute right-10 bottom-10 w-96 h-96 bg-blue-400 opacity-20 rounded-full blur-2xl"></div>
     </div>
-    <h1 className="relative text-5xl md:text-7xl font-extrabold text-blue-900 drop-shadow-lg animate-fade-in-down">
-      WELCOME TO <span className="text-blue-600 animate-pulse">TITAN</span>
-    </h1>
-    <p className="relative mt-8 text-xl md:text-2xl text-blue-800 font-medium animate-fade-in-up">
-      <span className="bg-white/70 px-4 py-2 rounded-xl shadow-md backdrop-blur-sm">
-        Every great swing starts with Titan
-      </span>
-    </p>
-    {/* Animaciones personalizadas */}
+{/* Content */}
+<div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
+  <h1
+    className="font-oswald font-extrabold text-black drop-shadow-xl animate-fade-in-down text-center"
+    style={{
+      fontFamily: "'Oswald', Arial, sans-serif",
+      fontWeight: 700,
+      fontSize: "8vw",
+      lineHeight: 1,
+      letterSpacing: "0.04em",
+      textTransform: "uppercase"
+    }}
+  >
+    WELCOME TO <span className="text-blue-600 animate-pulse">TITAN</span>
+  </h1>
+  <p
+    className="mt-10 text-black font-oswald font-bold animate-fade-in-up text-center"
+    style={{
+      fontFamily: "'Oswald', Arial, sans-serif",
+      fontWeight: 700,
+      fontSize: "2.5vw",
+      letterSpacing: "0.04em",
+      textTransform: "uppercase",
+    }}
+  >
+    Every great swing starts with Titan
+  </p>
+</div>
+    {/* Animations */}
     <style>
       {`
         @keyframes fade-in-down {
