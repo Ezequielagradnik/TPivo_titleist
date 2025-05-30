@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import Header from './components/Header';
 import './styles.css'; 
 import Footer from './components/Footer';
+import Feature from './components/Feature';
+
 function App() {
     return (
         <div className="app">
         <Header />
-        <main>
-            <h1>Welcome to Titan Golf</h1>
-            <p>Your one-stop shop for all things golf.</p>
-            <img src="/assets/titan-logo.png" alt="Titan Logo" style={{ height: 100 }} />
-           </main>
+        <main className="flex-1">
+        <Feature />
+        </main>
         <Footer />
         </div>
 
