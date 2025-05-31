@@ -9,7 +9,7 @@ function App() {
     return (
         <div className="app">
         <Header />
-        <main className="flex-1">
+        <main className="main-content">
         <Feature />
         </main>
         <Footer />
