@@ -3,32 +3,85 @@ import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-        <div className="mb-6 md:mb-0 flex items-center gap-4">
+    <footer
+      style={{
+        background: "#1a202c",
+        color: "#fff",
+        padding: "3rem 0",
+        marginTop: "auto"
+      }}
+    >
+      <div
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          padding: "0 1rem",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexWrap: "wrap"
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: 0 }}>
           <img
             src="/assets/titan-logo.png"
             alt="Titan Logo"
-            className="h-10 w-auto filter brightness-0 invert"
+            style={{
+              height: 100,
+              width: "auto",
+              filter: "brightness(0) invert(1)"
+            }}
           />
-          <span className="text-lg font-bold tracking-wide">TITAN</span>
+          <span style={{ fontSize: "1.125rem", fontWeight: "bold", letterSpacing: "0.05em" }}></span>
         </div>
-        <div className="flex space-x-6">
-          <a href="#" aria-label="Facebook" className="hover:text-blue-400 transition-colors">
+        <div style={{ display: "flex", gap: "1.5rem" }}>
+          <a
+            href="#"
+            aria-label="Facebook"
+            style={{ color: "#fff", transition: "color 0.2s" }}
+            onMouseOver={e => (e.currentTarget.style.color = "#60a5fa")}
+            onMouseOut={e => (e.currentTarget.style.color = "#fff")}
+          >
             <Facebook size={28} />
           </a>
-          <a href="#" aria-label="Instagram" className="hover:text-pink-400 transition-colors">
+          <a
+            href="#"
+            aria-label="Instagram"
+            style={{ color: "#fff", transition: "color 0.2s" }}
+            onMouseOver={e => (e.currentTarget.style.color = "#ec4899")}
+            onMouseOut={e => (e.currentTarget.style.color = "#fff")}
+          >
             <Instagram size={28} />
           </a>
-          <a href="#" aria-label="Twitter" className="hover:text-sky-400 transition-colors">
+          <a
+            href="#"
+            aria-label="Twitter"
+            style={{ color: "#fff", transition: "color 0.2s" }}
+            onMouseOver={e => (e.currentTarget.style.color = "#38bdf8")}
+            onMouseOut={e => (e.currentTarget.style.color = "#fff")}
+          >
             <Twitter size={28} />
           </a>
-          <a href="#" aria-label="YouTube" className="hover:text-red-500 transition-colors">
+          <a
+            href="#"
+            aria-label="YouTube"
+            style={{ color: "#fff", transition: "color 0.2s" }}
+            onMouseOver={e => (e.currentTarget.style.color = "#ef4444")}
+            onMouseOut={e => (e.currentTarget.style.color = "#fff")}
+          >
             <Youtube size={28} />
           </a>
         </div>
       </div>
-      <div className="mt-8 text-center text-gray-400 text-sm">
+      <div
+        style={{
+          marginTop: "2rem",
+          textAlign: "center",
+          color: "#a0aec0",
+          fontSize: "0.95rem"
+        }}
+      >
         &copy; {new Date().getFullYear()} TITAN Golf. All rights reserved.
       </div>
     </footer>

@@ -1,37 +1,140 @@
 import React from "react";
 
 const Anuncio = () => (
-  <section className="relative w-full min-h-[450px] flex items-center justify-center bg-black overflow-hidden">
+  <section
+    style={{
+      position: "relative",
+      width: "100%",
+      minHeight: 450,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      background: "#000",
+      overflow: "hidden"
+    }}
+  >
     {/* Imagen de fondo expandida */}
     <img
       src="/assets/anuncio.png"
       alt="Anuncio Titan"
-      className="absolute inset-0 w-full h-full object-cover object-center opacity-80"
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        objectPosition: "center",
+        opacity: 0.8,
+        zIndex: 1,
+        userSelect: "none",
+        pointerEvents: "none"
+      }}
       draggable={false}
     />
     {/* Overlay oscuro para mejor lectura */}
-    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80"></div>
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        background: "linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4), rgba(0,0,0,0.8))",
+        zIndex: 2
+      }}
+    ></div>
     {/* Contenido centrado */}
-    <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 py-20 w-full">
+    <div
+      style={{
+        position: "relative",
+        zIndex: 3,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        padding: "5rem 1rem",
+        width: "100%"
+      }}
+    >
       <img
         src="/assets/titan-logo.png"
         alt="Titan Logo"
-        className="h-20 mb-6 drop-shadow-lg"
-        style={{ filter: "brightness(0) invert(1)" }}
+        style={{
+          height: 80,
+          marginBottom: 24,
+          filter: "brightness(0) invert(1)",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.2)"
+        }}
       />
-      <span className="bg-white/90 text-black text-xs font-bold px-4 py-1 rounded-full mb-4 shadow-lg uppercase tracking-widest">Nuevo</span>
-      <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-2 tracking-wide drop-shadow-lg">
-        <span className="text-red-500">T</span>SERIES
+      <span
+        style={{
+          background: "rgba(255,255,255,0.9)",
+          color: "#111",
+          fontSize: 13,
+          fontWeight: "bold",
+          padding: "4px 16px",
+          borderRadius: 999,
+          marginBottom: 16,
+          boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
+          textTransform: "uppercase",
+          letterSpacing: "0.15em"
+        }}
+      >
+        Nuevo
+      </span>
+      <h2
+        style={{
+          fontSize: "3rem",
+          fontWeight: 800,
+          color: "#fff",
+          marginBottom: 8,
+          letterSpacing: "0.04em",
+          textShadow: "0 2px 8px rgba(0,0,0,0.2)"
+        }}
+      >
+        <span style={{ color: "#ef4444" }}>T</span>SERIES
       </h2>
-      <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-lg">NOW ON TOUR</h3>
-      <p className="text-white text-lg md:text-xl max-w-2xl mb-8 drop-shadow-lg">
+      <h3
+        style={{
+          fontSize: "2rem",
+          fontWeight: 700,
+          color: "#fff",
+          marginBottom: 16,
+          textShadow: "0 2px 8px rgba(0,0,0,0.2)"
+        }}
+      >
+        NOW ON TOUR
+      </h3>
+      <p
+        style={{
+          color: "#fff",
+          fontSize: 20,
+          maxWidth: 600,
+          marginBottom: 32,
+          textShadow: "0 2px 8px rgba(0,0,0,0.2)"
+        }}
+      >
         Descubre los nuevos modelos de hierros T-Series, el resultado de años de colaboración entre el equipo de I+D de Titan y los profesionales del Tour.
       </p>
       <button
-        className="bg-red-600 hover:bg-red-700 text-white font-bold px-10 py-4 rounded-full text-lg shadow-xl transition-all duration-200 transform hover:scale-105 focus:outline-none"
         style={{
+          background: "#dc2626",
+          color: "#fff",
+          fontWeight: "bold",
+          padding: "16px 40px",
+          borderRadius: 999,
+          fontSize: 20,
           boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.2)",
-          letterSpacing: "0.05em"
+          letterSpacing: "0.05em",
+          border: "none",
+          cursor: "pointer",
+          transition: "all 0.2s",
+        }}
+        onMouseOver={e => {
+          e.currentTarget.style.background = "#b91c1c";
+          e.currentTarget.style.transform = "scale(1.05)";
+        }}
+        onMouseOut={e => {
+          e.currentTarget.style.background = "#dc2626";
+          e.currentTarget.style.transform = "scale(1)";
         }}
       >
         Explorar
