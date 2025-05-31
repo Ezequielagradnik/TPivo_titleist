@@ -4,17 +4,18 @@ import Header from './components/Header';
 import './styles.css'; 
 import Footer from './components/Footer';
 import Feature from './components/Feature';
+import Anuncio from './components/Anuncio';
 
 function App() {
     return (
-        <div className="app">
-        <Header />
-        <main className="main-content">
-        <Feature />
-        </main>
-        <Footer />
+        <div>
+            <Header />
+            <main>
+            <Anuncio/>
+            <Feature />
+            </main>
+            <Footer />
         </div>
-
     );
 }
 

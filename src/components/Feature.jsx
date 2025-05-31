@@ -1,7 +1,7 @@
 import React from "react";
 
 const Feature = () => (
-  <section className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white via-blue-50 to-blue-100 relative overflow-hidden">
+  <section className="flex items-center justify-center min-h-screen bg-gradient-to-b from-white via-blue-50 to-blue-100 relative overflow-hidden text-center">
     {/* Background blobs */}
     <div className="absolute inset-0 pointer-events-none">
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-200 opacity-30 rounded-full blur-3xl"></div>
@@ -10,7 +10,7 @@ const Feature = () => (
     {/* Content */}
     <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
       <h1
-        className="font-oswald font-extrabold text-black drop-shadow-xl animate-fade-in-down text-center"
+        className="font-oswald font-extrabold text-black drop-shadow-xl animate-fade-in-down"
         style={{
           fontFamily: "'Oswald', Arial, sans-serif",
           fontWeight: 700,
@@ -24,7 +24,7 @@ const Feature = () => (
         <span className="text-blue-600 animate-pulse shine-effect">TITAN</span>
       </h1>
       <p
-        className="mt-8 text-black font-oswald font-bold animate-fade-in-up text-center"
+        className="mt-8 text-black font-oswald font-bold animate-fade-in-up"
         style={{
           fontFamily: "'Oswald', Arial, sans-serif",
           fontWeight: 700,
@@ -35,7 +35,6 @@ const Feature = () => (
       >
         Every great swing starts with Titan
       </p>
-
     </div>
     {/* Animations */}
     <style>
