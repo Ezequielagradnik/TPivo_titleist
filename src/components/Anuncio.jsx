@@ -31,15 +31,6 @@ const Anuncio = () => (
       }}
       draggable={false}
     />
-    {/* Overlay oscuro para mejor lectura */}
-    <div
-      style={{
-        position: "absolute",
-        inset: 0,
-        background: "linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4), rgba(0,0,0,0.8))",
-        zIndex: 2
-      }}
-    ></div>
     {/* Contenido centrado */}
     <div
       style={{
@@ -87,7 +78,7 @@ const Anuncio = () => (
           color: "#fff",
           marginBottom: 8,
           letterSpacing: "0.04em",
-          textShadow: "0 2px 8px rgba(0,0,0,0.2)"
+          textShadow: "0 2px 8px rgb(242, 235, 235)"
         }}
       >
         <span style={{ color: "#ef4444" }}>T</span>SERIES
