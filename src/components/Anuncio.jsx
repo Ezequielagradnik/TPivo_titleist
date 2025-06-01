@@ -50,7 +50,7 @@ const Anuncio = () => (
         src="/assets/titan-logo.png"
         alt="Titan Logo"
         style={{
-          height: 200,
+          height: 280,
             width: "auto",
           marginBottom: 24,
           filter: "brightness(0) invert(1)",
@@ -67,7 +67,7 @@ const Anuncio = () => (
           textShadow: "0 2px 8px rgb(242, 235, 235)"
         }}
       >
-        <span style={{ color: "#2563eb" }}>T</span>SERIES
+      
       </h2>
       <p
         style={{
