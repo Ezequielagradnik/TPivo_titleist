@@ -5,6 +5,7 @@ const Anuncio = () => (
     style={{
       position: "relative",
       width: "100%",
+      height: "80vh",
       minHeight: 450,
       display: "flex",
       alignItems: "center",
@@ -49,28 +50,13 @@ const Anuncio = () => (
         src="/assets/titan-logo.png"
         alt="Titan Logo"
         style={{
-          height: 80,
+          height: 200,
+            width: "auto",
           marginBottom: 24,
           filter: "brightness(0) invert(1)",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.2)"
         }}
       />
-      <span
-        style={{
-          background: "rgba(255,255,255,0.9)",
-          color: "#111",
-          fontSize: 13,
-          fontWeight: "bold",
-          padding: "4px 16px",
-          borderRadius: 999,
-          marginBottom: 16,
-          boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
-          textTransform: "uppercase",
-          letterSpacing: "0.15em"
-        }}
-      >
-        Nuevo
-      </span>
+     
       <h2
         style={{
           fontSize: "3rem",
@@ -81,19 +67,8 @@ const Anuncio = () => (
           textShadow: "0 2px 8px rgb(242, 235, 235)"
         }}
       >
-        <span style={{ color: "#ef4444" }}>T</span>SERIES
+        <span style={{ color: "#2563eb" }}>T</span>SERIES
       </h2>
-      <h3
-        style={{
-          fontSize: "2rem",
-          fontWeight: 700,
-          color: "#fff",
-          marginBottom: 16,
-          textShadow: "0 2px 8px rgba(0,0,0,0.2)"
-        }}
-      >
-        NOW ON TOUR
-      </h3>
       <p
         style={{
           color: "#fff",
@@ -120,11 +95,11 @@ const Anuncio = () => (
           transition: "all 0.2s",
         }}
         onMouseOver={e => {
-          e.currentTarget.style.background = "#b91c1c";
+          e.currentTarget.style.background = "#1d59de";
           e.currentTarget.style.transform = "scale(1.05)";
         }}
         onMouseOut={e => {
-          e.currentTarget.style.background = "#dc2626";
+          e.currentTarget.style.background = "#2563eb";
           e.currentTarget.style.transform = "scale(1)";
         }}
       >
