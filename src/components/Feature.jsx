@@ -4,13 +4,13 @@ const Feature = () => (
   <section
     style={{
       display: "flex",
-      alignItems: "center",
+      alignItems: "flex-start",
       justifyContent: "center",
       minHeight: "100vh",
       position: "relative",
       overflow: "hidden",
       textAlign: "center",
-      background: "linear-gradient(to bottom, #fff, #f0f6ff 50%, #dbeafe 100%)"
+      background: "linear-gradient(to bottom, #eaf3ff 0%, #eaf3ff 100%)" // unified background
     }}
   >
     {/* Background blobs */}
@@ -18,7 +18,8 @@ const Feature = () => (
       style={{
         position: "absolute",
         inset: 0,
-        pointerEvents: "none"
+        pointerEvents: "none",
+        zIndex: 0,
       }}
     >
       <div
@@ -59,7 +60,8 @@ const Feature = () => (
         alignItems: "center",
         justifyContent: "center",
         width: "100%",
-        height: "100%"
+        height: "100%",
+        marginTop: "10vh",
       }}
     >
       <h1
@@ -103,6 +105,55 @@ const Feature = () => (
       >
         Every great swing starts with Titan
       </p>
+      {/* Pitch destacado con efecto visual */}
+      <div
+        style={{
+          marginTop: "3.5rem",
+          maxWidth: 700,
+          position: "relative",
+          display: "inline-block",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "110%",
+            height: "120%",
+            background: "linear-gradient(120deg, #2563eb55 0%, #60a5fa33 100%)",
+            filter: "blur(32px)",
+            borderRadius: "32px",
+            zIndex: 0,
+            opacity: 0.7,
+            animation: "pitch-glow 3s ease-in-out infinite alternate"
+          }}
+        ></div>
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+            padding: "2.5rem 2.5rem 2.5rem 2.5rem",
+            borderRadius: "32px",
+            background: "rgba(255,255,255,0.92)",
+            boxShadow: "0 8px 32px 0 rgba(37,99,235,0.10)",
+            fontSize: "1.35rem",
+            fontFamily: "Inter, Arial, sans-serif",
+            fontWeight: 500,
+            color: "#1e293b",
+            lineHeight: 1.6,
+            letterSpacing: "0.01em",
+            textAlign: "center",
+            backdropFilter: "blur(2px)",
+          }}
+        >
+          <span style={{ fontWeight: 700, color: "#2563eb", fontSize: "1.15em" }}>Titan</span> is your destination for the best premium <b>drivers</b>, <b>irons</b>, and <b>fairway woods</b>.<br /><br />
+          Discover the new <b>GT280</b>, <b>GT1</b>, and <b>GT Hybrids</b> lines, designed to maximize your performance on the course.<br /><br />
+          <span style={{ color: "#2563eb", fontWeight: 700 }}>Professional quality</span>, innovation, and technology for every level.<br />
+          <span style={{ fontWeight: 700, color: "#111" }}>Take your game to the next level with Titan!</span>
+        </div>
+      </div>
     </div>
     <style>
       {`
@@ -137,6 +188,10 @@ const Feature = () => (
           100% {
             left: 125%;
           }
+        }
+        @keyframes pitch-glow {
+          0% { opacity: 0.7; filter: blur(32px);}
+          100% { opacity: 1; filter: blur(48px);}
         }
       `}
     </style>

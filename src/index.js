@@ -5,15 +5,15 @@ import './styles.css';
 import Footer from './components/Footer';
 import Feature from './components/Feature';
 import Anuncio from './components/Anuncio';
+import NewArticles from './components/newarticles';
 
 function App() {
     return (
         <div>
             <Header />
-            <main>
-            <Anuncio/>
-            <Feature />
-            </main>
+                    <Anuncio />
+                    <Feature />
+                    <NewArticles />
             <Footer />
         </div>
     );

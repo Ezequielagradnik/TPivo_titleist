@@ -69,20 +69,10 @@ const Anuncio = () => (
       >
       
       </h2>
-      <p
-        style={{
-          color: "#fff",
-          fontSize: 20,
-          maxWidth: 600,
-          marginBottom: 32,
-          textShadow: "0 2px 8px rgba(0,0,0,0.2)"
-        }}
-      >
-        Descubre los nuevos modelos de hierros T-Series, el resultado de años de colaboración entre el equipo de I+D de Titan y los profesionales del Tour.
-      </p>
+
       <button
         style={{
-          background: "#dc2626",
+          background: "#2563eb",
           color: "#fff",
           fontWeight: "bold",
           padding: "16px 40px",
